@@ -7,7 +7,8 @@ require("dotenv").config();
 
 const SendOrder = () => {
   const [message, setMessage] = useState("");
-  const apiUrl = "http://localhost:7000"
+  const apiUrl = "https://geopizzaapp2020.herokuapp.com"
+  //"http://localhost:7000"
   //process.env.REACT_APP_API_URL;
 
   const { getAccessTokenSilently } = useAuth0();
