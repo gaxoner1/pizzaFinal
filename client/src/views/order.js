@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Button, ButtonGroup, Container } from "react-bootstrap";
-import Highlight from "../components/highlight";
+import { Button, ButtonGroup } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import Menu from "./Menu";
 require("dotenv").config();
@@ -19,7 +18,7 @@ const SendOrder = () => {
        //SHOULD BE EXPLICIT
        const token = await getAccessTokenSilently({
          audience: 'sample.express-api.com',
-         scope: ([ 'read:messages read:users' ]),
+         scope: ["read:messages", "read:users"]
        });
       //It is likely it is an opaque access token and not jwt
       //console.log(`debugg token/ JWT call: ${token}`)

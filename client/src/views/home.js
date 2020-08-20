@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink as RouterNavLink } from "react-router-dom";
-import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 

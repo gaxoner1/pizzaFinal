@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Highlight, Loading } from "../components";
+import { Highlight } from "../components";
 
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Profile = () => {
   const { user } = useAuth0();
+
+//HERE WE CAN EXTRACT ADDITIONAL FIELDS FROM API CALL TO GOOGLE IDP AND LOAD
+//ADDITIONAL
+
   const { name, picture, email } = user;
   const [userMetadata] = useState(null);
 
@@ -30,6 +34,9 @@ const Profile = () => {
          <Highlight>{JSON.stringify(user, null, 2)}</Highlight>
        </Row>
        <div>
+
+       //TODO if user metadata render here: GENDER & CONNECTIONS
+
        <h3>User Metadata</h3>
        {userMetadata ? (
          <pre>{JSON.stringify(userMetadata, null, 2)}</pre>

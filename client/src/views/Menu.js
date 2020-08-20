@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./views.css";
-import Button from 'react-bootstrap/Button'
 import Card  from "react-bootstrap/Card";
-import { useAuth0 } from "@auth0/auth0-react";
 
 
 const Menu = () => {

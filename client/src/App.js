@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 import { NavBar, Loading, PrivateRoute } from "./components";
-import { Home, Profile, Menu, ExternalApi, SendOrder} from "./views";
+import { Home, Profile, SendOrder} from "./views";
 
 import "./App.css";
 
@@ -24,7 +24,6 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/order" exact component={SendOrder} />
           <PrivateRoute path="/profile" component={Profile} />
-          //<Route path="/external-api" component={ExternalApi} />
         </Switch>
       </Container>
     </div>

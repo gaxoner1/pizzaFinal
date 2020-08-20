@@ -2,10 +2,20 @@
 
 App created with React Node Express and Auth0
 
+![Pizza Home](assets/Pizza Home.png)
+![Pizza Order](assets/Pizza Order.png)
+
+## Hosted Version
+
+https://geopizzaapp2020.herokuapp.com/
+Note: Due to Content Security Policy in modern browsers, rendering scripts or URLs from 3rd parties (React scripts, boot strap style sheets, APIs, etc) may cause an error.
+
+More Info:
+https://developers.google.com/web/fundamentals/security/csp
 
 ## Get Started
 
-Install the client project dependencies:
+Install the client project dependencies on both React Frontend (Client) & NodeJS backend (server in root).
 
 ```bash
 npm init
