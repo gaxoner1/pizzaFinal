@@ -2,8 +2,8 @@
 
 App created with React Node Express and Auth0
 
-![Pizza Home](assets/Pizza Home.png)
-![Pizza Order](assets/Pizza Order.png)
+![Pizza Home](assets/PizzaHome.png)
+![Pizza Order](assets/PizzaOrder.png)
 
 ## Hosted Version
 
