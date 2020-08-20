@@ -13,8 +13,7 @@ const path = require('path')
 
 const app = express();
 
-const port = "7000"
-//process.env.API_PORT || 5000;
+const port = process.env.API_PORT || 7000;
 const appOrigin = "http://localhost:3000"
 //process.env.APP_ORIGIN;
 const audience = "sample.express-api.com"
@@ -78,12 +77,11 @@ app.get('/order', checkJwt, checkScopes, function(req, res) {
 
 //check if in prod and pass build folder to serve app.
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('/build'));
+  app.use(express.static('client/build'));
 
   app.get('*', (req,res) => {
-    res.sendFile(path.join(_dirname, 'auth0-express-sample/build/index.html' )); //pass relative path
+    res.sendFile(path.join(_dirname, 'client/build/index.html' )); //pass relative path
   })
-
 }
 
 app.listen(port, () => console.log(`API Server listening on port ${port}`));
