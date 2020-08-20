@@ -13,7 +13,7 @@ const path = require('path')
 
 const app = express();
 
-const port = process.env.API_PORT || 7000;
+const port = process.env.API_PORT || 5000;
 const appOrigin = "http://localhost:3000"
 //process.env.APP_ORIGIN;
 const audience = "sample.express-api.com"
