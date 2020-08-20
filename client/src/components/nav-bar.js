@@ -53,7 +53,7 @@ const AuthNav = () => {
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="md">
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
       <Navbar.Brand href="/">PIZZA 42</Navbar.Brand>
         <MainNav />

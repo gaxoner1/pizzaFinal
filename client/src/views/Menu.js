@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./views.css";
 import Button from 'react-bootstrap/Button'
-import { Card } from "react-bootstrap";
+import Card  from "react-bootstrap/Card";
 import { useAuth0 } from "@auth0/auth0-react";
 
 
@@ -33,7 +33,7 @@ const Menu = () => {
   const renderMenu = (item, index) => {
     return (
       <Card style={{ width: "18rem" }} key={index} className="box">
-        <Card.Img variant="top" src="holder.js/100px180" src={item.image} />
+        <Card.Img variant="top" src="holder.js/100px160" src={item.image} />
         <Card.Body>
           <Card.Title>{item.title}</Card.Title>
           <Card.Text>{item.text}</Card.Text>
