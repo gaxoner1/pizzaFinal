@@ -16,6 +16,7 @@ const App = () => {
    return <Loading />;
  }
 
+//Wrap private routes (can also use higher order functions)
   return (
     <div id="app" className="d-flex flex-column h-100">
       <NavBar />

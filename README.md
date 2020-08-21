@@ -37,6 +37,10 @@ Run the server project:
 cd server/server.js && node server.js
 ```
 
+### Prod to Local Environment Changes
+
+API is from production domain; For local environments the API call to the URL should be changed to localhost (ie. http://localhost:5000/ for server)
+
 ### Dependencies
 
 @auth0/auth0-react

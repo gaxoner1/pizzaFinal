@@ -16,7 +16,8 @@ const app = express();
 //process.env.PORT for HEROKU DYNAMIC ASSNMT
 const port = process.env.PORT || 5000;
 //const port = process.env.API_PORT || 5000;
-const appOrigin = "http://localhost:3000"
+const appOrigin = "https://geopizzaapp2020.herokuapp.com/order"
+//"http://localhost:3000"
 //process.env.APP_ORIGIN;
 const audience = "sample.express-api.com"
 //process.env.AUTH0_AUDIENCE;
@@ -50,25 +51,6 @@ const checkJwt = jwt({
 
 //app.use(jwtCheck);
 
-
-// app.get("/api/public-message", (req, res) => {
-//   res.send({
-//     msg: "The API doesn't require an access token to share this message.",
-//   });
-// });
-//
-// app.get("/api/private-message", checkJwt, (req, res) => {
-//   res.send({
-//     msg: "The API successfully validated your access token.",
-//   });
-// });
-
-// pass checkJwt to get req to ensure auth.
-// app.get("/order", checkJwt, (req, res) => {
-//   res.send({
-//     msg: "Order Recieved.",
-//   });
-// });
 
 //compare scope with user making call (may handle Insufficient scope 403 err)
 const checkScopes = jwtAuthz([ 'read:messages read:users' ]);

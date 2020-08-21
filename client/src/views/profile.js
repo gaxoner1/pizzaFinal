@@ -8,7 +8,18 @@ const Profile = () => {
   const { user } = useAuth0();
 
 //HERE WE CAN EXTRACT ADDITIONAL FIELDS FROM API CALL TO GOOGLE IDP AND LOAD
-//ADDITIONAL
+//ADDITIONAL DETAILS TO PASS TO METADATA
+//RULES VS CALLING IdP unclear here
+// const accessToken = await auth0.getTokenSilently();
+//   const result = await fetch('https://people.google.com', {
+//     method: 'GET',
+//     headers: {
+//       Authorization: `Bearer ${accessToken}`
+//     }
+//   });
+//   const data = await result.json();
+//   console.log(data);
+// });
 
   const { name, picture, email } = user;
   const [userMetadata] = useState(null);

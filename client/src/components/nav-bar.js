@@ -36,6 +36,8 @@ const MainNav = () => (
   </Nav>
 );
 
+//Deconstruct TRUE or FALSE for conditional render.
+
 const AuthNav = () => {
   const { isAuthenticated } = useAuth0();
   const SignOrRegBtns = (
