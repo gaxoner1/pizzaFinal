@@ -1,8 +1,7 @@
-const path = require('path')
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const helmet = require("helmet");
+//const helmet = require("helmet");
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
 const jwtAuthz = require("express-jwt-authz");
@@ -29,7 +28,7 @@ if (!issuer || !audience) {
 }
 //middleware
 app.use(morgan("dev"));
-app.use(helmet());
+//app.use(helmet());
 app.use(cors({ origin: appOrigin }));
 
 const checkJwt = jwt({
