@@ -25,7 +25,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
       redirectUri={window.location.origin}
       onRedirectCallback={onRedirectCallback}
       audience={audience}
-      scope="openid profile email gender"
+      //scope="openid profile email gender"
 
     >
       {children}
