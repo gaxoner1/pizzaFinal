@@ -19,7 +19,7 @@ const SendOrder = () => {
        //SHOULD BE EXPLICIT
        const token = await getAccessTokenSilently({
          audience: 'sample.express-api.com',
-         scope: ["read:messages", "read:users"]
+         scope: ([ 'read:messages read:users' ]),
        });
       //It is likely it is an opaque access token and not jwt
       //console.log(`debugg token/ JWT call: ${token}`)
