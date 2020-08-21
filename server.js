@@ -1,13 +1,12 @@
-require("dotenv").config();
-
+const path = require('path')
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const helmet = require("helmet");
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
 const jwtAuthz = require("express-jwt-authz");
 const path = require('path')
+require("dotenv").config();
 
 
 
@@ -29,7 +28,6 @@ if (!issuer || !audience) {
 }
 //middleware
 app.use(morgan("dev"));
-app.use(helmet());
 app.use(cors({ origin: appOrigin }));
 
 const checkJwt = jwt({
