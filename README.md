@@ -37,9 +37,13 @@ Run the server project:
 cd server/server.js && node server.js
 ```
 
-### Prod to Local Environment Changes
+### Possible Troubleshooting steps on local env.
+Default port for server 5000; For Client = 3000.
 
-API is from production domain; For local environments the API call to the URL should be changed to localhost (ie. http://localhost:5000/ for server)
+For local environments the API call to the URL should be to server where port is listening.
+
+(ie. http://localhost:5000/ for server | http://localhost:3000 for client.)
+
 
 ### Dependencies
 

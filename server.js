@@ -16,8 +16,7 @@ const app = express();
 //process.env.PORT for HEROKU DYNAMIC ASSNMT
 const port = process.env.PORT || 5000;
 //const port = process.env.API_PORT || 5000;
-const appOrigin = "https://geopizzaapp2020.herokuapp.com/order"
-//"http://localhost:3000"
+const appOrigin = "http://localhost:3000"
 //process.env.APP_ORIGIN;
 const audience = "sample.express-api.com"
 //process.env.AUTH0_AUDIENCE;

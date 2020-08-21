@@ -2,6 +2,8 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
 
+//API call to /authorize endpoint/ pass parameters in header.
+
 const Auth0ProviderWithHistory = ({ children }) => {
   const domain = "dev-99jq8v4p.us.auth0.com"
   //process.env.REACT_APP_AUTH0_DOMAIN;
@@ -10,6 +12,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
   const audience = "sample.express-api.com"
   //process.env.AUTH0_AUDIENCE
 
+//Hook for navidation in routes based on state
   const history = useHistory();
 
   //TODO: Look into this:
