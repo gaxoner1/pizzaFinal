@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Button, ButtonGroup } from "react-bootstrap";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import Menu from "./Menu";
-import { Loading } from "../components/loading";
+import { Loading } from "../../components/loading";
 require("dotenv").config();
+
+
 
 const SendOrder = () => {
   const [message, setMessage] = useState("");
