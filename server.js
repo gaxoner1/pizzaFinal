@@ -52,7 +52,8 @@ const checkJwt = jwt({
 
 
 //compare scope with user making call (may handle Insufficient scope 403 err)
-const checkScopes = jwtAuthz([ 'read:messages read:users' ]);
+//check for the permissions in the permissions array found in the JWT
+const checkScopes = jwtAuthz([ 'read:messages read:users' ], options);
 
 app.get('/order', checkJwt, checkScopes, function(req, res) {
   res.json({ message: "Order recieved" });
