@@ -54,15 +54,8 @@ const checkJwt = jwt({
 //compare scope with user making call (may handle Insufficient scope 403 err)
 // const checkScopes = jwtAuthz([ 'read:messages read:users' ], options);
 
-// app.get('/order', checkJwt, checkScopes, function(req, res) {
-//   res.json({ message: "Order recieved" });
-// });
-
-//DEBUG TEST:
-app.get("/order", checkJwt, (req, res) => {
-  res.send({
-    msg: "Order Placed!",
-  });
+app.get('/ordernow', checkJwt, function(req, res) {
+  res.json({ message: "Order recieved" });
 });
 
 //check if in prod and pass build folder to serve app.

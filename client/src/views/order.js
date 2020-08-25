@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button, ButtonGroup } from "react-bootstrap";
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 import Menu from "./Menu";
-import { Loading } from "../../components/loading";
+
 require("dotenv").config();
 
 
@@ -25,7 +25,7 @@ const SendOrder = () => {
        });
       //It is likely it is an opaque access token and not jwt
       //console.log(`debugg token/ JWT call: ${token}`)
-       const response = await fetch(`${apiUrl}/order`,
+       const response = await fetch(`${apiUrl}/ordernow`,
          {
          headers: {
            Authorization: `Bearer ${token}`,
@@ -33,8 +33,8 @@ const SendOrder = () => {
        }
      );
       const responseData = await response.json();
-      console.log(`responseData: ${responseData}`)
-      setMessage(responseData);
+      console.log(`responseData: ${JSON.stringify(responseData.message)}`)
+      setMessage(responseData.message);
     } catch (error) {
       setMessage(error.message);
     }
@@ -58,7 +58,4 @@ const SendOrder = () => {
     );
   };
 
-//TEST export default SendOrder;
-export default withAuthenticationRequired(SendOrder, {
-  onRedirecting: () => <Loading />,
-});
+export default SendOrder;
