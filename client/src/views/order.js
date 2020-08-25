@@ -4,7 +4,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Menu from "./Menu";
 require("dotenv").config();
 
-
 const SendOrder = () => {
   const [message, setMessage] = useState("");
   const apiUrl = "https://geopizzaapp2020.herokuapp.com"
